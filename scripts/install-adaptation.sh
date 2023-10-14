@@ -46,9 +46,9 @@ cleanup() {
 }
 
 apt install -y curl
-curl -sS https://mirror.bardia.tech/surya/surya.gpg | tee /etc/apt/trusted.gpg.d/surya.gpg
-curl https://mirror.bardia.tech/surya/surya.gpg | sudo apt-key add -
-curl -sS -o /etc/apt/sources.list.d/surya.list https://mirror.bardia.tech/surya/surya.list
+curl -sS https://repo.bardia.tech/repo.gpg | tee /etc/apt/trusted.gpg.d/repo.gpg
+curl https://repo.bardia.tech/repo.gpg | sudo apt-key add -
+curl -sS -o /etc/apt/sources.list.d/surya.list https://repo.bardia.tech/repo.list
 apt update
 
 tmpdir="$(mktemp -d)"
